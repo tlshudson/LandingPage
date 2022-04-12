@@ -9,7 +9,7 @@
 /* TELA FUNDO */
 
 html{
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
     font-size: 62.5%;
     color: white;
@@ -18,7 +18,7 @@ html{
 }
 
 body{
-    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)),
+    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 0.9)),
      url(img/img5.jpg);
      background-position: center center;
      background-size: cover;
@@ -77,6 +77,81 @@ header{
     width: 100%;
 }
 
+/* CONTEUDO */
+
+main{
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.primary-text{
+    width: 850px;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.secundary-text{
+    margin-bottom: 7rem;
+    font-size: 2rem;
+    color: rgb(165, 165, 165);
+    text-transform: uppercase;
+}
+
+/* BOTÕES */
+
+.btns{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btns button{
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    border-radius: 20px;
+    position: relative;
+    transition: 1.5s;
+}
+
+.btns button:hover{
+    color: rgb(251, 255, 0);
+    border: none;
+}
+
+.btns button:before{
+    content: ' ';
+    border-radius: 20px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 60px;
+    background-color: rgb(61, 61, 61);
+    z-index: -1;
+    transition: 1s;
+}
+
+.btns button:hover:before{
+    width: 100%;
+}
+
 .foot{
     width: 100%;
     height: 20px;
@@ -84,8 +159,10 @@ header{
     bottom: 0;
     left: 0;
     text-align: end;
+
 }
 
 .foot .text-foot{
+    font-size: 1.2rem;
     color: white;
 }
